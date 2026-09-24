@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>Небольшое письмо</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="window" aria-labelledby="title">
+      <div class="titlebar" aria-hidden="true">
+        <div class="traffic-lights"><i></i><i></i><i></i></div>
+        <span>Почта</span>
+      </div>
+
+      <section class="content">
+        <h1 id="title">Будем на связи.</h1>
+        <p class="intro">Немного полезного для тех,<br>кто создаёт для веба.</p>
+
+        <!-- No names: this local demo never puts personal data in the URL. -->
+        <form action="#sent" method="get">
+          <label class="field-label" for="email">Электронная почта</label>
+          <input id="email" type="email" autocomplete="email"
+            placeholder="you@example.com" pattern="[^@\s]+@[^@\s.]+(\.[^@\s.]+)+" required>
+
+          <label class="consent">
+            <input type="checkbox" required>
+            <span>Хочу получать письма.<br><small>Отписаться можно в любой момент.</small></span>
+          </label>
+
+          <button type="submit">Подписаться <span aria-hidden="true">↗</span></button>
+          <p class="status" aria-live="polite">
+            <span class="pending">Укажите почту и отметьте согласие</span>
+            <span class="ready">✓ Всё готово к отправке</span>
+          </p>
+        </form>
+
+        <aside class="confirmation" id="sent" role="status">
+          <strong>Проверка пройдена.</strong>
+          <p>Это демо. Подписка не оформлена,<br>почта никуда не отправлена.</p>
+          <a href="#">Вернуться к форме</a>
+        </aside>
+      </section>
+      <footer>Без спама. С вниманием к деталям.</footer>
+    </main>
+  </body>
+</html>
